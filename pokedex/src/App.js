@@ -2,22 +2,9 @@ import pikachu from './assets/pikachu.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={pikachu} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="container">
+      <img src={pikachu} className="pokemonImage" alt="pokemon not found" />
+    </section>
   );
 }
 
