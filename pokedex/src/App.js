@@ -1,4 +1,5 @@
 import pikachu from './assets/pikachu.svg';
+import './App.css'
 
 function App() {
   return (
