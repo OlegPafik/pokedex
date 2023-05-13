@@ -1,10 +1,14 @@
 import pikachu from './assets/pikachu.svg';
+import imgWeight from './assets/imgWeight.svg'
+import imgHeight from './assets/imgHeight.svg'
 import './App.css'
 
-const Measure = (value, type) => {
+const Measure = ({value, type}) => {
+  const image = (type === "weight") ? imgWeight : imgHeight
+  
   return(
     <div className="measures">
-      <img className="iconMeasure" alt="icon not found"></img>
+      <img className="iconMeasure" src={image} alt="icon not found"></img>
       <p className="valueMeasure"></p>
       <footer className="typeMeasure"></footer>
     </div>
