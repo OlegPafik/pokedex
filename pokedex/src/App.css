@@ -69,5 +69,8 @@
   flex-wrap: wrap;
   width: 3rem;
   padding: 0 1.531rem 0 1.531rem;
+}
+
+.spec:not(:last-child) {
   border-right: 1px solid grey;
 }
