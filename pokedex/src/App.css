@@ -55,10 +55,16 @@ html {
 .card__description {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   background: var(--white);
   height: 15rem;
   border-radius: 8px;
   align-items: center;
+}
+
+.card__description--type {
+  color: red;
+  border: 1px solid red;
 }
 
 .innerSpecs {
