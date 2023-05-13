@@ -49,7 +49,7 @@ function App() {
           </header>
           <section className="card__description">
             <div className="card__description--type">Electric</div>
-            <title className="card__description--titleAbout">About</title>
+            <div className="card__description--titleAbout">About</div>
             <Specs className="card__description--specs" weight={5} height={4}/>
             <p className="card__description--contentAbout">Big pokemon eleeeeeeeeeeeeeeeeeeeeeeectric</p>
           </section>
