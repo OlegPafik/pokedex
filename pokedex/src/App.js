@@ -29,7 +29,7 @@ const Moves = ({value}) => {
 
 const Specs = ({weight, height, moves = undefined}) => {
   return(
-    <div>
+    <div className='innerSpecs'>
       <Measure value={weight} type="Weight"/>
       <Measure value={height} type="Height"/>
       <Moves value={moves}/>
