@@ -5,11 +5,12 @@ import './App.css'
 
 const Measure = ({value, type}) => {
   const image = (type === "weight") ? imgWeight : imgHeight
+  const shownValue = (type === "weight") ? (value + "kg") : (value + "m")
   
   return(
     <div className="measures">
       <img className="iconMeasure" src={image} alt="icon not found"></img>
-      <p className="valueMeasure"></p>
+      <p className="valueMeasure"> {shownValue} </p>
       <footer className="typeMeasure"></footer>
     </div>
   )
