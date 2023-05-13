@@ -9,6 +9,7 @@
   --psychic: #FB5584;
   --ice: #9AB6DF;
   --electric: #F9CF30;
+  --white: #FFFFFF;
 }  
 
 .container {
@@ -20,4 +21,15 @@
   top: 39rem;
   left: 28.125rem;
   border-radius: 12px;
+}
+
+.description {
+  background: var(--white);
+  width: 18.025rem;
+  height: 15rem;
+  top: 9.688rem;
+  left: 0.313rem;
+  border-radius: 8px;
+  padding: 3.5rem, 1.25rem, 0, 1.25rem;
+  gap: 1rem;
 }
