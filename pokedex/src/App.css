@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" );
+/* document {
+  font-family: 'Mont'
+} */
 
 :root {
   --rock: #B69E31;
@@ -68,7 +70,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 3rem;
+  height: 3rem;
   padding: 0 1.531rem 0 1.531rem;
+  gap: 0.5rem;
 }
 
 .spec:not(:last-child) {
