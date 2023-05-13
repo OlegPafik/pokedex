@@ -63,8 +63,12 @@ html {
 }
 
 .card__description--type {
-  color: red;
-  border: 1px solid red;
+  border-radius: 10px;
+  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+  color: var(--white);
+  background: var(--electric);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 .innerSpecs {
