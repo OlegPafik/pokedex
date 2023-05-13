@@ -35,13 +35,14 @@
   flex-grow: 1;
   justify-content: space-between;
   border: 1px solid red;
+  padding: 24px 14px 0 16px;
 }
 
 .name {
 }
 
 .number {
-  
+
 }
 
 
