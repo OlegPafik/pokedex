@@ -29,7 +29,7 @@
   padding: 5px;
 }
 
-.id {
+.card__id {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -38,19 +38,19 @@
   padding: 24px 14px 0 16px;
 }
 
-.name {
+.card__id--name {
 }
 
-.number {
+.card__id--number {
 
 }
 
-.pokemonImage {
+.card__pokemonImage {
   position: absolute;
   margin: 3.625rem 4.063rem 12rem 5.313rem;
 }
 
-.description {
+.card__description {
   display: flex;
   flex-direction: column;
   background: var(--white);

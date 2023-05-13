@@ -42,16 +42,16 @@ function App() {
     <body>
       <section className="allCards">
         <div className="card">
-          <img src={pikachu} className="pokemonImage" alt="pokemon not found" />
-          <header className="id">
-            <div className="name">Pikachu</div>
-            <div className="number">#025</div>
+          <img src={pikachu} className="card__pokemonImage" alt="pokemon not found" />
+          <header className="card__id">
+            <div className="card__id--name">Pikachu</div>
+            <div className="card__id--number">#025</div>
           </header>
-          <section className="description">
-            <div className="type">Electric</div>
-            <title className="titleAbout">About</title>
-            <Specs className="specs" weight={5} height={4}/>
-            <p className="contentAbout">Big pokemon eleeeeeeeeeeeeeeeeeeeeeeectric</p>
+          <section className="card__description">
+            <div className="card__description--type">Electric</div>
+            <title className="card__description--titleAbout">About</title>
+            <Specs className="card__description--specs" weight={5} height={4}/>
+            <p className="card__description--contentAbout">Big pokemon eleeeeeeeeeeeeeeeeeeeeeeectric</p>
           </section>
         </div>
       </section>
