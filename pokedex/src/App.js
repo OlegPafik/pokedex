@@ -48,10 +48,10 @@ function App() {
             <div className="number">#025</div>
           </header>
           <section className="description">
-            <div className="type"></div>
-            <title className="titleAbout"></title>
+            <div className="type">Electric</div>
+            <title className="titleAbout">About</title>
             <Specs className="specs" weight={5} height={4}/>
-            <p className="contentAbout"></p>
+            <p className="contentAbout">Big pokemon eleeeeeeeeeeeeeeeeeeeeeeectric</p>
           </section>
         </div>
       </section>
