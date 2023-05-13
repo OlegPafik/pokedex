@@ -45,16 +45,17 @@
 
 }
 
-
 .pokemonImage {
   position: absolute;
   margin: 3.625rem 4.063rem 12rem 5.313rem;
 }
 
 .description {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   height: 15rem;
   border-radius: 8px;
   gap: 1rem;
+  align-items: center;
 }
