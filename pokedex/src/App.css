@@ -1,6 +1,7 @@
-/* document {
-  font-family: 'Mont'
-} */
+html {
+  font-size: 14px;
+  line-height: 16px;
+}
 
 :root {
   --rock: #B69E31;
