@@ -11,18 +11,18 @@ const Measure = (value, type) => {
   )
 }
 
-const Moves = (value) => {
+const Moves = ({value}) => {
   if (value !== undefined) {
     return(
       <div>
-        <p>{}</p>
+        <p>{value}</p>
         <footer>Moves</footer>
       </div>
     )
   }
 }
 
-const Specs = (weight, height, moves = undefined) => {
+const Specs = ({weight, height, moves = undefined}) => {
   return(
     <div>
       <Measure value={weight} type="weight"/>
