@@ -4,14 +4,14 @@ import imgHeight from './assets/imgHeight.svg'
 import './App.css'
 
 const Measure = ({value, type}) => {
-  const image = (type === "weight") ? imgWeight : imgHeight
-  const shownValue = (type === "weight") ? (value + "kg") : (value + "m")
+  const image = (type === "Weight") ? imgWeight : imgHeight
+  const shownValue = (type === "Weight") ? (value + "kg") : (value + "m")
   
   return(
     <div className="measures">
       <img className="iconMeasure" src={image} alt="icon not found"></img>
       <p className="valueMeasure"> {shownValue} </p>
-      <footer className="typeMeasure"></footer>
+      <footer className="typeMeasure"> {type} </footer>
     </div>
   )
 }
@@ -30,8 +30,8 @@ const Moves = ({value}) => {
 const Specs = ({weight, height, moves = undefined}) => {
   return(
     <div>
-      <Measure value={weight} type="weight"/>
-      <Measure value={height} type="height"/>
+      <Measure value={weight} type="Weight"/>
+      <Measure value={height} type="Height"/>
       <Moves value={moves}/>
     </div>
   )
