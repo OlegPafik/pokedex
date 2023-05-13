@@ -64,3 +64,10 @@
   display: flex;
   flex-direction: row;
 }
+
+.spec {
+  display: flex;
+  flex-wrap: wrap;
+  width: 3rem;
+  margin: 0 1.531rem 0 1.531rem;
+}

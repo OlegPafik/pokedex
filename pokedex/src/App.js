@@ -8,7 +8,7 @@ const Measure = ({value, type}) => {
   const shownValue = (type === "Weight") ? (value + "kg") : (value + "m")
   
   return(
-    <div className="measures">
+    <div className="spec">
       <img className="iconMeasure" src={image} alt="icon not found"></img>
       <p className="valueMeasure"> {shownValue} </p>
       <footer className="typeMeasure"> {type} </footer>
@@ -19,7 +19,7 @@ const Measure = ({value, type}) => {
 const Moves = ({value}) => {
   if (value !== undefined) {
     return(
-      <div>
+      <div className="spec">
         <p>{value}</p>
         <footer>Moves</footer>
       </div>
@@ -29,7 +29,7 @@ const Moves = ({value}) => {
 
 const Specs = ({weight, height, moves = undefined}) => {
   return(
-    <div className='innerSpecs'>
+    <div className="innerSpecs">
       <Measure value={weight} type="Weight"/>
       <Measure value={height} type="Height"/>
       <Moves value={moves}/>
