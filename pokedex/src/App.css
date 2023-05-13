@@ -12,23 +12,32 @@
   --white: #FFFFFF;
 }  
 
-.container {
-  text-align: center;
-  margin-top: 20rem;
-  background: var(--electric);
+.allCards {
+  margin-top: 39rem;
+  margin-left: 28.125rem;
+}
+
+.card {
   width: 18.75rem;
   height: 25rem;
-  top: 39rem;
-  left: 28.125rem;
   border-radius: 12px;
+
+  position: relative;
+  background: var(--electric);
+}
+
+.pokemonImage {
+  position: absolute;
+  margin: 58px 65px 192px 85px;
 }
 
 .description {
   background: var(--white);
   width: 18.025rem;
-  height: 15rem;
-  top: 9.688rem;
-  left: 0.313rem;
+  height: 100%;
+  margin-top: 7.1875rem;
+  margin-bottom: 0.313rem;
+  margin-left: 0.313rem;
   border-radius: 8px;
   padding: 3.5rem, 1.25rem, 0, 1.25rem;
   gap: 1rem;

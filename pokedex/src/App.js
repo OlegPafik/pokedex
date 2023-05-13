@@ -39,22 +39,22 @@ const Specs = ({weight, height, moves = undefined}) => {
 
 function App() {
   return (
-    <body className="container">
-      <div className="card">
-        <header className="id">
-          <div className="name">Pikachu</div>
-          <div className="number">#025</div>
-        </header>
-        <img src={pikachu} className="pokemonImage" alt="pokemon not found" />
-        <section className="description">
-          <div className="type"></div>
-          <title className="titleAbout"></title>
-          <Specs className="specs" weight={5} height={4}/>
-          <p className="contentAbout"></p>
-        </section>
-      </div>
-
-
+    <body>
+      <section className="allCards">
+        <div className="card">
+          <img src={pikachu} className="pokemonImage" alt="pokemon not found" />
+          <header className="id">
+            <div className="name">Pikachu</div>
+            <div className="number">#025</div>
+          </header>
+          <section className="description">
+            <div className="type"></div>
+            <title className="titleAbout"></title>
+            <Specs className="specs" weight={5} height={4}/>
+            <p className="contentAbout"></p>
+          </section>
+        </div>
+      </section>
     </body>
   );
 }
