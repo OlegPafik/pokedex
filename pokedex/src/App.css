@@ -76,7 +76,9 @@ html {
 }
 
 .card__description--contentAbout{
-  font-size: 0.625rem;
+  font-size: 10px;
+  text-align: justify;
+  line-height: 16px;
 }
 
 .innerSpecs {
