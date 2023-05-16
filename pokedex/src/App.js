@@ -39,38 +39,27 @@ const Specs = ({weight, height, moves = undefined}) => {
   );
 }
 
-const pokemonPikachu = {
-  id: "#025",
-  name: "Pikachu",
-  height: "0.4",
-  weight: "6.0",
-  types: ["Electric"],
-  src: pikachu,
-  description:
-    "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-};
 
-function App() {
+function App({pokemon}) {
   return (
     <body>
       <section className="allCards">
         <div className="card">
           <img
-            src={pikachu}
+            src={pokemon.src}
             className="card__pokemonImage"
             alt="pokemon not found"
           />
           <header className="card__id">
-            <div className="card__id--name">Pikachu</div>
-            <div className="card__id--number">#025</div>
+            <div className="card__id--name">{pokemon.name}</div>
+            <div className="card__id--number">{pokemon.id}</div>
           </header>
-          <section className="card__description">
-            <div className="card__description--type">Electric</div>
+          <section className="card__description">            
+            <div className="card__description--type">{pokemon.types[0]}</div>
             <div className="card__description--titleAbout">About</div>
-            <Specs weight={"6,0"} height={"0,4"} />
+            <Specs weight={pokemon.weight} height={pokemon.height} />
             <p className="card__description--contentAbout">
-              Pikachu that can generate powerful electricity have cheek sacs
-              that are extra soft and super stretchy.
+              {pokemon.description}
             </p>
           </section>
         </div>
