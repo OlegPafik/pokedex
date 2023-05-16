@@ -39,6 +39,17 @@ const Specs = ({weight, height, moves = undefined}) => {
   );
 }
 
+const pokemonPikachu = {
+  id: "#025",
+  name: "Pikachu",
+  height: "0.4",
+  weight: "6.0",
+  types: ["Electric"],
+  src: pikachu,
+  description:
+    "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+};
+
 function App() {
   return (
     <body>
