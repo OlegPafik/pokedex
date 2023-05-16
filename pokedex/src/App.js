@@ -1,11 +1,10 @@
-import pikachu from './assets/pikachu.svg';
 import imgWeight from './assets/imgWeight.svg'
 import imgHeight from './assets/imgHeight.svg'
 import './App.css'
 
 const Measure = ({value, type}) => {
   const image = (type === "Weight") ? imgWeight : imgHeight
-  const shownValue = (type === "Weight") ? (value + " kg") : (value + " m")
+  const shownValue = (type === "Weight") ? (`${value}   kg`) : (`${value} m`)
   
   return (
     <div className="spec__content">
