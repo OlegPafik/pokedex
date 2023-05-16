@@ -21,7 +21,7 @@ const Moves = ({value}) => {
     return (
       <div className="spec">
         <p className="valueSpec">{value}</p>
-        <footer>Moves</footer>
+        <footer className="typeSpec">Moves</footer>
       </div>
     );
   }

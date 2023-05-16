@@ -13,6 +13,7 @@ html {
   --ice: #9AB6DF;
   --electric: #F9CF30;
   --white: #FFFFFF;
+  --medium-gray: #666666;
 }  
 
 .allCards {
@@ -84,6 +85,11 @@ html {
 .innerSpecs {
   display: flex;
   flex-direction: row;
+  
+}
+
+.typeSpec{
+  color: var(--medium-gray);
 }
 
 .spec {
