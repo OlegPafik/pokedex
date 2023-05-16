@@ -7,23 +7,23 @@ const Measure = ({value, type}) => {
   const image = (type === "Weight") ? imgWeight : imgHeight
   const shownValue = (type === "Weight") ? (value + "kg") : (value + "m")
   
-  return(
+  return (
     <div className="spec">
       <img className="iconMeasure" src={image} alt="icon not found"></img>
-      <p className="valueMeasure"> {shownValue} </p>
-      <footer className="typeMeasure"> {type} </footer>
+      <p className="valueSpec"> {shownValue} </p>
+      <footer className="typeSpec"> {type} </footer>
     </div>
-  )
+  );
 }
 
 const Moves = ({value}) => {
   if (value !== undefined) {
-    return(
+    return (
       <div className="spec">
-        <p>{value}</p>
+        <p className="valueSpec">{value}</p>
         <footer>Moves</footer>
       </div>
-    )
+    );
   }
 }
 
@@ -42,7 +42,11 @@ function App() {
     <body>
       <section className="allCards">
         <div className="card">
-          <img src={pikachu} className="card__pokemonImage" alt="pokemon not found" />
+          <img
+            src={pikachu}
+            className="card__pokemonImage"
+            alt="pokemon not found"
+          />
           <header className="card__id">
             <div className="card__id--name">Pikachu</div>
             <div className="card__id--number">#025</div>
@@ -50,8 +54,11 @@ function App() {
           <section className="card__description">
             <div className="card__description--type">Electric</div>
             <div className="card__description--titleAbout">About</div>
-            <Specs className="card__description--specs" weight={5} height={4}/>
-            <p className="card__description--contentAbout">Big pokemon eleeeeeeeeeeeeeeeeeeeeeeectric</p>
+            <Specs className="card__description--specs" weight={5} height={4} />
+            <p className="card__description--contentAbout">
+              Pikachu that can generate powerful electricity have cheek sacs
+              that are extra soft and super stretchy.
+            </p>
           </section>
         </div>
       </section>

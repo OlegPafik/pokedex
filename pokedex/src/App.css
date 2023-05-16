@@ -24,7 +24,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 18.75rem;
-  height: 25rem;
+  height: 25rem;  
   border-radius: 12px;
 
   position: relative;
@@ -40,12 +40,6 @@ html {
   padding: 24px 14px 0 16px;
 }
 
-.card__id--name {
-}
-
-.card__id--number {
-
-}
 
 .card__pokemonImage {
   position: absolute;
@@ -60,6 +54,8 @@ html {
   height: 15rem;
   border-radius: 8px;
   align-items: center;
+  gap: 1rem;
+  padding: 0 1.25rem 0.25rem 1.25rem;
 }
 
 .card__description--type {
@@ -79,6 +75,10 @@ html {
   font-size: 14px;
 }
 
+.card__description--contentAbout{
+  font-size: 0.625rem;
+}
+
 .innerSpecs {
   display: flex;
   flex-direction: row;
@@ -89,7 +89,16 @@ html {
   flex-wrap: wrap;
   width: 3rem;
   height: 3rem;
-  padding: 0 1.531rem 0 1.531rem;
+  padding: 0 1.531rem 0 1.531rem;  
+}
+
+.valueSpec{
+  font-size: 10px;
+}
+
+.typeSpec{
+  font-size: 8px;
+  line-height: 12px;
 }
 
 .spec:not(:last-child) {
