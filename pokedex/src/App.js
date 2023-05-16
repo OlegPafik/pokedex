@@ -54,10 +54,14 @@ function App({pokemon}) {
             <div className="card__id--name">{pokemon.name}</div>
             <div className="card__id--number">{pokemon.id}</div>
           </header>
-          <section className="card__description">            
+          <section className="card__description">
             <div className="card__description--type">{pokemon.types[0]}</div>
             <div className="card__description--titleAbout">About</div>
-            <Specs weight={pokemon.weight} height={pokemon.height} />
+            <Specs
+              weight={pokemon.weight}
+              height={pokemon.height}
+              moves={pokemon.moves}
+            />
             <p className="card__description--contentAbout">
               {pokemon.description}
             </p>
