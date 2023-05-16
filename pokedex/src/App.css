@@ -39,6 +39,16 @@ html {
   flex-grow: 1;
   justify-content: space-between;
   padding: 24px 14px 0 16px;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.card__id--name{
+  font-size: 24px;
+}
+
+.card__id--number{
+  font-size: 12px;
 }
 
 
@@ -82,33 +92,41 @@ html {
   line-height: 16px;
 }
 
-.innerSpecs {
+.card__description--specs {
   display: flex;
   flex-direction: row;
-  
 }
 
-.typeSpec{
+.spec__content--value-Weight{
+  gap: 0.5rem;
+}
+
+.spec__content--value-Height{
+  gap: 0.75rem;
+}
+
+.spec__content-type{
+  font-size: 8px;
+  line-height: 12px;
   color: var(--color-medium-gray);
+
 }
 
-.spec {
+.spec__content {
   display: flex;
-  flex-wrap: wrap;
-  width: 3rem;
+  flex-direction: column;
+  padding: 0 1.531rem 0 1.531rem; 
   height: 3rem;
-  padding: 0 1.531rem 0 1.531rem;  
 }
 
 .valueSpec{
   font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.typeSpec{
-  font-size: 8px;
-  line-height: 12px;
-}
 
-.spec:not(:last-child) {
+.spec__content:not(:last-child) {
   border-right: 1px solid grey;
 }
