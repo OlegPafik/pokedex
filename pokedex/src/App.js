@@ -9,7 +9,9 @@ const Measure = ({value, type}) => {
   
   return (
     <div className="spec__content">
-      <div className={"spec__content--value-" + { type }}>
+      <div
+        className={`spec__content--value-${type} spec__content--value`}
+      >
         <img src={image} alt="icon not found"></img>
         <p> {shownValue} </p>
       </div>
