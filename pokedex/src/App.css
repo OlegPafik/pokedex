@@ -4,16 +4,16 @@ html {
 }
 
 :root {
-  --rock: #B69E31;
-  --ghost: #70559B;
-  --steel: #B7B9D0;
-  --water: #6493EB;
-  --grass: #74CB48;
-  --psychic: #FB5584;
-  --ice: #9AB6DF;
-  --electric: #F9CF30;
-  --white: #FFFFFF;
-  --medium-gray: #666666;
+  --color-rock: #B69E31;
+  --color-ghost: #70559B;
+  --color-steel: #B7B9D0;
+  --color-water: #6493EB;
+  --color-grass: #74CB48;
+  --color-psychic: #FB5584;
+  --color-ice: #9AB6DF;
+  --color-electric: #F9CF30;
+  --color-white: #FFFFFF;
+  --color-medium-gray: #666666;
 }  
 
 .allCards {
@@ -29,7 +29,7 @@ html {
   border-radius: 12px;
 
   position: relative;
-  background: var(--electric);
+  background: var(--color-electric);
   padding: 5px;
 }
 
@@ -51,7 +51,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: var(--white);
+  background: var(--color-white);
   height: 15rem;
   border-radius: 8px;
   align-items: center;
@@ -62,15 +62,15 @@ html {
 .card__description--type {
   border-radius: 10px;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
-  color: var(--white);
-  background: var(--electric);
+  color: var(--color-white);
+  background: var(--color-electric);
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 10px;
 }
 
 .card__description--titleAbout {
-  color: var(--electric);
+  color: var(--color-electric);
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -89,7 +89,7 @@ html {
 }
 
 .typeSpec{
-  color: var(--medium-gray);
+  color: var(--color-medium-gray);
 }
 
 .spec {
