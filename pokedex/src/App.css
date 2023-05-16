@@ -97,6 +97,20 @@ html {
   flex-direction: row;
 }
 
+.spec__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.531rem 0 1.531rem; 
+  height: 3rem;
+}
+
+.spec__content--value{
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .spec__content--value-Weight{
   gap: 0.5rem;
 }
@@ -109,23 +123,7 @@ html {
   font-size: 8px;
   line-height: 12px;
   color: var(--color-medium-gray);
-
 }
-
-.spec__content {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1.531rem 0 1.531rem; 
-  height: 3rem;
-}
-
-.valueSpec{
-  font-size: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 
 .spec__content:not(:last-child) {
   border-right: 1px solid grey;
