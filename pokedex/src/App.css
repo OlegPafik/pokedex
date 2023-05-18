@@ -17,6 +17,9 @@ html {
 }  
 
 .allCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 39rem;
   margin-left: 28.125rem;
 }
@@ -31,6 +34,7 @@ html {
   position: relative;
   background: var(--color-electric);
   padding: 5px;
+  margin-bottom:15px ;
 }
 
 .card__id {
