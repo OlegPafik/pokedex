@@ -1,5 +1,6 @@
 import "./App.css";
 import Pokemon from "./pokemon.js";
+import "./api.js";
 
 function App({ pokemons }) {
   return (
