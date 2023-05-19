@@ -4,13 +4,14 @@ async function fetchPokemons(pokemonIndex) {
   const response = await fetch(pokemonIndex.url);
 
   const pokemonAllInfo = await response.json();
-
+  //console.log(JSON.stringify(pokemonAllInfo.types[0].type.name));
   const pokemon = {
     id: pokemonAllInfo.id,
     name: pokemonAllInfo.name,
     height: pokemonAllInfo.height,
-    weight: pokemonAllInfo.width,
-    types: ["electric"],
+    weight: pokemonAllInfo.weight,
+    types: pokemonAllInfo.types.map((slot) => slot.type["name"]), // pokemonAllInfo.types.type.map((x) => x["name"]),
+    // pokemonAllInfo.types.map((type) => type["name"]),
     src: "description of " + pokemonAllInfo.name,
     description: "description of " + pokemonAllInfo.name,
     moves: ["move1"],
