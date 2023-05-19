@@ -3,15 +3,16 @@ import Pokemon from "./pokemon.js";
 import api from "./api.js";
 import { useEffect, useState } from "react";
 
-function App({ pokemons }) {
-  const [pokemonsUrls, setPokemonsUrls] = useState([]);
+function App({ limit }) {
+  const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
     const fetchPokemons = async (limit) => {
-      const urls = await api.getPokemonsByLimit(limit);
-      setPokemonsUrls(urls);
-      alert(JSON.stringify(urls));
+      const receivedPokemons = await api.getPokemonsByLimit(limit);
+
+      setPokemons(receivedPokemons);
     };
+
     fetchPokemons();
   }, []);
 
@@ -19,7 +20,7 @@ function App({ pokemons }) {
     <body>
       <header>This is my header</header>
       <section className="allCards">
-        {[].map((eachPokemon) => {
+        {pokemons.map((eachPokemon) => {
           return <Pokemon pokemon={eachPokemon} />;
         })}
       </section>

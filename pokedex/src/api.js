@@ -37,7 +37,14 @@ const api = {
 
   getPokemonsByLimit: async (limit) => {
     const response = await fetch(URL_POKEMON_API + limit);
-    return await response.json();
+    const limitedListPokemons = await response.json();
+    const pokemonUrls = limitedListPokemons.results;
+    pokemonUrls.map(async (pokemonIndex) => {
+      const response = await fetch(pokemonIndex.url);
+      console.log(await response.json());
+    });
+
+    return [];
   },
 };
 export default api;
