@@ -4,17 +4,17 @@ html {
 }
 
 :root {
-  --color-rock: #B69E31;
-  --color-ghost: #70559B;
-  --color-steel: #B7B9D0;
-  --color-water: #6493EB;
-  --color-grass: #74CB48;
-  --color-psychic: #FB5584;
-  --color-ice: #9AB6DF;
-  --color-electric: #F9CF30;
-  --color-white: #FFFFFF;
+  --color-rock: #b69e31;
+  --color-ghost: #70559b;
+  --color-steel: #b7b9d0;
+  --color-water: #6493eb;
+  --color-grass: #74cb48;
+  --color-psychic: #fb5584;
+  --color-ice: #9ab6df;
+  --color-electric: #f9cf30;
+  --color-white: #ffffff;
   --color-medium-gray: #666666;
-}  
+}
 
 .allCards {
   display: flex;
@@ -28,13 +28,13 @@ html {
   display: flex;
   flex-direction: column;
   width: 18.75rem;
-  height: 25rem;  
+  height: 25rem;
   border-radius: 12px;
 
   position: relative;
   background: var(--color-electric);
   padding: 5px;
-  margin-bottom:15px ;
+  margin-bottom: 15px;
 }
 
 .card__id {
@@ -47,14 +47,13 @@ html {
   font-weight: 700;
 }
 
-.card__id--name{
+.card__id--name {
   font-size: 24px;
 }
 
-.card__id--number{
+.card__id--number {
   font-size: 12px;
 }
-
 
 .card__pokemonImage {
   position: absolute;
@@ -78,19 +77,19 @@ html {
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
   color: var(--color-white);
   background: var(--color-electric);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 10px;
 }
 
 .card__description--titleAbout {
   color: var(--color-electric);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 14px;
 }
 
-.card__description--contentAbout{
+.card__description--contentAbout {
   font-size: 10px;
   text-align: justify;
   line-height: 16px;
@@ -104,26 +103,26 @@ html {
 .spec__content {
   display: flex;
   flex-direction: column;
-  padding: 0 1.531rem 0 1.531rem; 
+  padding: 0 1.531rem 0 1.531rem;
   height: 3rem;
 }
 
-.spec__content--value{
+.spec__content--value {
   font-size: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.spec__content--value-Weight{
+.spec__content--value-Weight {
   gap: 0.5rem;
 }
 
-.spec__content--value-Height{
+.spec__content--value-Height {
   gap: 0.75rem;
 }
 
-.spec__content-type{
+.spec__content-type {
   font-size: 8px;
   line-height: 12px;
   color: var(--color-medium-gray);
@@ -131,4 +130,8 @@ html {
 
 .spec__content:not(:last-child) {
   border-right: 1px solid grey;
+}
+
+img.card__pokemonImage {
+  height: -webkit-fill-available;
 }
