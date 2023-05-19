@@ -2,9 +2,13 @@ import imgWeight from "./assets/imgWeight.svg";
 import imgHeight from "./assets/imgHeight.svg";
 import "./App.css";
 
+import "./api.js";
+import { api } from "./api.js";
+
 const Measure = ({ value, type }) => {
   const image = type === "Weight" ? imgWeight : imgHeight;
   const shownValue = type === "Weight" ? `${value}   kg` : `${value} m`;
+  api.getPokemonByName("pikachu");
 
   return (
     <div className="spec__content">
