@@ -5,7 +5,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import pikachu from "./assets/pikachu.svg";
+import api from "./api.js";
 
+let p1 = api.getPokemonByName("pikachu");
 const pokemonPikachu = {
   id: "#025",
   name: "Pikachu",
