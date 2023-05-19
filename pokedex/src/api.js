@@ -1,50 +1,33 @@
 const URL_POKEMON_API = "https://pokeapi.co/api/v2/pokemon?limit=";
-/*
 
-  id: "#025",
-  name: "Pikachu",
-  height: "0.4",
-  weight: "6.0",
-  types: ["Electric"],
-  src: pikachu,
-  description:
-    "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-  moves: "pika pika",
-*/
+async function fetchPokemons(pokemonIndex) {
+  const response = await fetch(pokemonIndex.url);
+
+  const pokemonAllInfo = await response.json();
+
+  const pokemon = {
+    id: pokemonAllInfo.id,
+    name: pokemonAllInfo.name,
+    height: pokemonAllInfo.height,
+    weight: pokemonAllInfo.width,
+    types: ["electric"],
+    src: "description of " + pokemonAllInfo.name,
+    description: "description of " + pokemonAllInfo.name,
+    moves: ["move1"],
+  };
+  return pokemon;
+}
 
 const api = {
-  //   getPokemonByUrl: async (pokemonUrl) => {
-  //     axios
-  //       .get(pokemonUrl)
-  //       .then((response) => {
-  //         let pokemon_response = response.data;
-  //         console.log(pokemon_response);
-  //         let pokemon = {
-  //           id: pokemon_response.id,
-  //           name: pokemon_response.name,
-  //           height: pokemon_response.height,
-  //           weight: pokemon_response.width,
-  //           types: [],
-  //           src: "description of " + pokemon_response.name,
-  //           description: "description of " + pokemon_response.name,
-  //           moves: "",
-  //         };
-  //         return pokemon;
-  //       })
-  //       .catch((error) => {
-  //         return {};
-  //       });
-
   getPokemonsByLimit: async (limit) => {
     const response = await fetch(URL_POKEMON_API + limit);
     const limitedListPokemons = await response.json();
     const pokemonUrls = limitedListPokemons.results;
-    pokemonUrls.map(async (pokemonIndex) => {
-      const response = await fetch(pokemonIndex.url);
-      console.log(await response.json());
-    });
 
-    return [];
+    const allPokemons = await Promise.all(
+      pokemonUrls.map(async (pokemonIndex) => await fetchPokemons(pokemonIndex))
+    );
+    return allPokemons;
   },
 };
 export default api;

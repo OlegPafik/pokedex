@@ -9,7 +9,7 @@ function App({ limit }) {
   useEffect(() => {
     const fetchPokemons = async (limit) => {
       const receivedPokemons = await api.getPokemonsByLimit(limit);
-
+      console.log(receivedPokemons);
       setPokemons(receivedPokemons);
     };
 
