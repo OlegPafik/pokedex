@@ -4,33 +4,12 @@ import "./reset.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import pikachu from "./assets/pikachu.svg";
-import api from "./api.js";
 
-let p1 = api.getPokemonByName("pikachu");
-const pokemonPikachu = {
-  id: "#025",
-  name: "Pikachu",
-  height: "0.4",
-  weight: "6.0",
-  types: ["Electric"],
-  src: pikachu,
-  description:
-    "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-  moves: "pika pika",
-};
-const allPokemons = [
-  pokemonPikachu,
-  pokemonPikachu,
-  pokemonPikachu,
-  pokemonPikachu,
-  pokemonPikachu,
-  pokemonPikachu,
-];
+const numberOfPokemons = 10;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App pokemons={allPokemons} />
+    <App limitPokemons={numberOfPokemons} />
   </React.StrictMode>
 );
 

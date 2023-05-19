@@ -1,6 +1,4 @@
-import axios from "axios";
-
-const URL_POKEMON_API = "https://pokeapi.co/api/v2/pokemon/";
+const URL_POKEMON_API = "https://pokeapi.co/api/v2/pokemon?limit=";
 /*
 
   id: "#025",
@@ -15,16 +13,31 @@ const URL_POKEMON_API = "https://pokeapi.co/api/v2/pokemon/";
 */
 
 const api = {
-  getPokemonByName: async (pokemonName) => {
-    axios
-      .get(URL_POKEMON_API + pokemonName)
-      .then((response) => {
-        let pokemon_response = response;
-        alert(pokemon_response);
-      })
-      .catch((error) => {
-        alert(error);
-      });
+  //   getPokemonByUrl: async (pokemonUrl) => {
+  //     axios
+  //       .get(pokemonUrl)
+  //       .then((response) => {
+  //         let pokemon_response = response.data;
+  //         console.log(pokemon_response);
+  //         let pokemon = {
+  //           id: pokemon_response.id,
+  //           name: pokemon_response.name,
+  //           height: pokemon_response.height,
+  //           weight: pokemon_response.width,
+  //           types: [],
+  //           src: "description of " + pokemon_response.name,
+  //           description: "description of " + pokemon_response.name,
+  //           moves: "",
+  //         };
+  //         return pokemon;
+  //       })
+  //       .catch((error) => {
+  //         return {};
+  //       });
+
+  getPokemonsByLimit: async (limit) => {
+    const response = await fetch(URL_POKEMON_API + limit);
+    return await response.json();
   },
 };
 export default api;

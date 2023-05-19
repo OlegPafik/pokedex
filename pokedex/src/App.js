@@ -1,13 +1,25 @@
 import "./App.css";
 import Pokemon from "./pokemon.js";
-import "./api.js";
+import api from "./api.js";
+import { useEffect, useState } from "react";
 
 function App({ pokemons }) {
+  const [pokemonsUrls, setPokemonsUrls] = useState([]);
+
+  useEffect(() => {
+    const fetchPokemons = async (limit) => {
+      const urls = await api.getPokemonsByLimit(limit);
+      setPokemonsUrls(urls);
+      alert(JSON.stringify(urls));
+    };
+    fetchPokemons();
+  }, []);
+
   return (
     <body>
       <header>This is my header</header>
       <section className="allCards">
-        {pokemons.map((eachPokemon) => {
+        {[].map((eachPokemon) => {
           return <Pokemon pokemon={eachPokemon} />;
         })}
       </section>
