@@ -6,10 +6,12 @@ async function fetchPokemon(pokemonIndex) {
   const pokemonAllInfo = await response.json();
 
   const pokemon = {
-    id: pokemonAllInfo.id,
-    name: pokemonAllInfo.name,
-    height: pokemonAllInfo.height,
-    weight: pokemonAllInfo.weight,
+    id: "#" + pokemonAllInfo.id.toString().padStart(3, "0"),
+    name:
+      pokemonAllInfo.name.toString().charAt(0).toUpperCase() +
+      pokemonAllInfo.name.toString().slice(1),
+    height: pokemonAllInfo.height / 10,
+    weight: pokemonAllInfo.weight / 10,
     types: pokemonAllInfo.types.map((slot) => slot.type["name"]),
     src: pokemonAllInfo.sprites.other["official-artwork"].front_default,
     description: "description of " + pokemonAllInfo.name,
